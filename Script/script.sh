@@ -191,9 +191,11 @@ sudo rm -rf /mnt/loop/system/product/overlay/treble-overlay-asus-zenfone5.apk
 sudo cp hosts /mnt/loop/system/etc
 sudo chmod 644 /mnt/loop/system/etc/hosts
 #Include GrapheneOS camera app
-sudo cp GrapheneCam /mnt/loop/system/system_ext/priv_app
+sudo cp -r GrapheneCam /mnt/loop/system/system_ext/app
 #Bootanimation fix
 sudo rm -f /mnt/loop/system/product/media/bootanimation.zip
 sudo mv /mnt/loop/system/product/media/bootanimation-dark.zip /mnt/loop/system/product/media/bootanimation.zip
+sudo cp /mnt/loop/system/product/media/bootanimation.zip /mnt/loop/system/product/media/bootanimation-dark.zip
 sudo umount /mnt/loop
+echo Change buildprop manually
 
